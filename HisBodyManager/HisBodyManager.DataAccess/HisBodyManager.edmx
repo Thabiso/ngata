@@ -1,0 +1,1245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="hisbodymanagerModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="hisbodymanagerModelStoreContainer">
+          <EntitySet Name="address" EntityType="hisbodymanagerModel.Store.address" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="addresstype" EntityType="hisbodymanagerModel.Store.addresstype" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="churchinformation" EntityType="hisbodymanagerModel.Store.churchinformation" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="churchmemberroles" EntityType="hisbodymanagerModel.Store.churchmemberroles" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="churchroles" EntityType="hisbodymanagerModel.Store.churchroles" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="comments" EntityType="hisbodymanagerModel.Store.comments" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="commenttype" EntityType="hisbodymanagerModel.Store.commenttype" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="contactdetails" EntityType="hisbodymanagerModel.Store.contactdetails" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="gender" EntityType="hisbodymanagerModel.Store.gender" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="group" EntityType="hisbodymanagerModel.Store.group" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="grouptype" EntityType="hisbodymanagerModel.Store.grouptype" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="meetingtype" EntityType="hisbodymanagerModel.Store.meetingtype" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="member" EntityType="hisbodymanagerModel.Store.member" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="memberattendance" EntityType="hisbodymanagerModel.Store.memberattendance" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="membergroup" EntityType="hisbodymanagerModel.Store.membergroup" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="region" EntityType="hisbodymanagerModel.Store.region" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="title" EntityType="hisbodymanagerModel.Store.title" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="user" EntityType="hisbodymanagerModel.Store.user" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="usergroups" EntityType="hisbodymanagerModel.Store.usergroups" store:Type="Tables" Schema="hisbodymanager" />
+          <EntitySet Name="zone" EntityType="hisbodymanagerModel.Store.zone" store:Type="Tables" Schema="hisbodymanager" />
+          <AssociationSet Name="fkAddress_AddressType" Association="hisbodymanagerModel.Store.fkAddress_AddressType">
+            <End Role="addresstype" EntitySet="addresstype" />
+            <End Role="address" EntitySet="address" />
+          </AssociationSet>
+          <AssociationSet Name="fkAddress_Contactdetails" Association="hisbodymanagerModel.Store.fkAddress_Contactdetails">
+            <End Role="contactdetails" EntitySet="contactdetails" />
+            <End Role="address" EntitySet="address" />
+          </AssociationSet>
+          <AssociationSet Name="fkAddress_memeber" Association="hisbodymanagerModel.Store.fkAddress_memeber">
+            <End Role="member" EntitySet="member" />
+            <End Role="address" EntitySet="address" />
+          </AssociationSet>
+          <AssociationSet Name="fkchurchinformation_zone" Association="hisbodymanagerModel.Store.fkchurchinformation_zone">
+            <End Role="zone" EntitySet="zone" />
+            <End Role="churchinformation" EntitySet="churchinformation" />
+          </AssociationSet>
+          <AssociationSet Name="fkChurchMemberRoles_member" Association="hisbodymanagerModel.Store.fkChurchMemberRoles_member">
+            <End Role="member" EntitySet="member" />
+            <End Role="churchmemberroles" EntitySet="churchmemberroles" />
+          </AssociationSet>
+          <AssociationSet Name="fkChurchmemeberRoles_churchRole" Association="hisbodymanagerModel.Store.fkChurchmemeberRoles_churchRole">
+            <End Role="churchroles" EntitySet="churchroles" />
+            <End Role="churchmemberroles" EntitySet="churchmemberroles" />
+          </AssociationSet>
+          <AssociationSet Name="fkComments_CommentType" Association="hisbodymanagerModel.Store.fkComments_CommentType">
+            <End Role="commenttype" EntitySet="commenttype" />
+            <End Role="comments" EntitySet="comments" />
+          </AssociationSet>
+          <AssociationSet Name="fkComments_Member" Association="hisbodymanagerModel.Store.fkComments_Member">
+            <End Role="member" EntitySet="member" />
+            <End Role="comments" EntitySet="comments" />
+          </AssociationSet>
+          <AssociationSet Name="fkgroup" Association="hisbodymanagerModel.Store.fkgroup">
+            <End Role="group" EntitySet="group" />
+            <End Role="usergroups" EntitySet="usergroups" />
+          </AssociationSet>
+          <AssociationSet Name="fkGroup_GroupType" Association="hisbodymanagerModel.Store.fkGroup_GroupType">
+            <End Role="grouptype" EntitySet="grouptype" />
+            <End Role="membergroup" EntitySet="membergroup" />
+          </AssociationSet>
+          <AssociationSet Name="fkmember_gender" Association="hisbodymanagerModel.Store.fkmember_gender">
+            <End Role="gender" EntitySet="gender" />
+            <End Role="member" EntitySet="member" />
+          </AssociationSet>
+          <AssociationSet Name="fkMemberAttendance_Member" Association="hisbodymanagerModel.Store.fkMemberAttendance_Member">
+            <End Role="member" EntitySet="member" />
+            <End Role="memberattendance" EntitySet="memberattendance" />
+          </AssociationSet>
+          <AssociationSet Name="fkuser" Association="hisbodymanagerModel.Store.fkuser">
+            <End Role="user" EntitySet="user" />
+            <End Role="usergroups" EntitySet="usergroups" />
+          </AssociationSet>
+          <AssociationSet Name="kfcontactdetails_member" Association="hisbodymanagerModel.Store.kfcontactdetails_member">
+            <End Role="member" EntitySet="member" />
+            <End Role="contactdetails" EntitySet="contactdetails" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MemberId" Type="int" Nullable="false" />
+          <Property Name="Street" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Surburb" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="City" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="AddressTypeId" Type="int" Nullable="false" />
+          <Property Name="PostalCode" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="ContactDetailId" Type="int" />
+        </EntityType>
+        <EntityType Name="addresstype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="churchinformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="ZoneId" Type="int" Nullable="false" />
+          <Property Name="is" Type="varchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="churchmemberroles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="memberId" Type="int" Nullable="false" />
+          <Property Name="ChurchRoleId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="churchroles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="comments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Comment" Type="varchar" Nullable="false" MaxLength="1024" />
+          <Property Name="MemberId" Type="int" Nullable="false" />
+          <Property Name="CommentTypeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="commenttype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="contactdetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CellNumber" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="e-mail" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Home tel" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="MemberId" Type="int" Nullable="false" />
+          <Property Name="Work Tel" Type="varchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="gender">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="grouptype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="64" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="meetingtype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="member">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Surname" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Image" Type="binary" MaxLength="1" />
+          <Property Name="TitleId" Type="int" Nullable="false" />
+          <Property Name="GenderId" Type="int" Nullable="false" />
+          <Property Name="DateOfBirth" Type="int" Nullable="false" />
+          <Property Name="NationalityId" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="ChurchInformationId" Type="int" Nullable="false" />
+          <Property Name="RolesId" Type="int" Nullable="false" />
+          <Property Name="DateCompletedMembership" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bool" Nullable="false" />
+          <Property Name="DateJoinedMinistry" Type="datetime" Nullable="false" />
+          <Property Name="CellGroupId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="memberattendance">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MemberId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="MeetingTypeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="membergroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="GroupTypeId" Type="int" Nullable="false" />
+          <Property Name="Church" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="IsActive" Type="bool" Nullable="false" />
+        </EntityType>
+        <EntityType Name="region">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="IsActive" Type="bool" Nullable="false" />
+        </EntityType>
+        <EntityType Name="title">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="ChurchId" Type="int" Nullable="false" />
+          <Property Name="password" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="LastLogInDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="usergroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="Groupid" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6035: The relationship 'fkZone_Region' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+      -->
+        <EntityType Name="zone">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="RegionId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="fkAddress_AddressType">
+          <End Role="addresstype" Type="hisbodymanagerModel.Store.addresstype" Multiplicity="1" />
+          <End Role="address" Type="hisbodymanagerModel.Store.address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="addresstype">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="AddressTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkAddress_Contactdetails">
+          <End Role="contactdetails" Type="hisbodymanagerModel.Store.contactdetails" Multiplicity="0..1" />
+          <End Role="address" Type="hisbodymanagerModel.Store.address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contactdetails">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="ContactDetailId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkAddress_memeber">
+          <End Role="member" Type="hisbodymanagerModel.Store.member" Multiplicity="1" />
+          <End Role="address" Type="hisbodymanagerModel.Store.address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkchurchinformation_zone">
+          <End Role="zone" Type="hisbodymanagerModel.Store.zone" Multiplicity="1" />
+          <End Role="churchinformation" Type="hisbodymanagerModel.Store.churchinformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zone">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="churchinformation">
+              <PropertyRef Name="ZoneId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkChurchMemberRoles_member">
+          <End Role="member" Type="hisbodymanagerModel.Store.member" Multiplicity="1" />
+          <End Role="churchmemberroles" Type="hisbodymanagerModel.Store.churchmemberroles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="churchmemberroles">
+              <PropertyRef Name="memberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkChurchmemeberRoles_churchRole">
+          <End Role="churchroles" Type="hisbodymanagerModel.Store.churchroles" Multiplicity="1" />
+          <End Role="churchmemberroles" Type="hisbodymanagerModel.Store.churchmemberroles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="churchroles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="churchmemberroles">
+              <PropertyRef Name="ChurchRoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkComments_CommentType">
+          <End Role="commenttype" Type="hisbodymanagerModel.Store.commenttype" Multiplicity="1" />
+          <End Role="comments" Type="hisbodymanagerModel.Store.comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="commenttype">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="comments">
+              <PropertyRef Name="CommentTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkComments_Member">
+          <End Role="member" Type="hisbodymanagerModel.Store.member" Multiplicity="1" />
+          <End Role="comments" Type="hisbodymanagerModel.Store.comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="comments">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkgroup">
+          <End Role="group" Type="hisbodymanagerModel.Store.group" Multiplicity="0..1" />
+          <End Role="usergroups" Type="hisbodymanagerModel.Store.usergroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="usergroups">
+              <PropertyRef Name="Groupid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkGroup_GroupType">
+          <End Role="grouptype" Type="hisbodymanagerModel.Store.grouptype" Multiplicity="1" />
+          <End Role="membergroup" Type="hisbodymanagerModel.Store.membergroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grouptype">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="membergroup">
+              <PropertyRef Name="GroupTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkmember_gender">
+          <End Role="gender" Type="hisbodymanagerModel.Store.gender" Multiplicity="1" />
+          <End Role="member" Type="hisbodymanagerModel.Store.member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="gender">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="member">
+              <PropertyRef Name="GenderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkMemberAttendance_Member">
+          <End Role="member" Type="hisbodymanagerModel.Store.member" Multiplicity="1" />
+          <End Role="memberattendance" Type="hisbodymanagerModel.Store.memberattendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="memberattendance">
+              <PropertyRef Name="MeetingTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkuser">
+          <End Role="user" Type="hisbodymanagerModel.Store.user" Multiplicity="0..1" />
+          <End Role="usergroups" Type="hisbodymanagerModel.Store.usergroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="usergroups">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kfcontactdetails_member">
+          <End Role="member" Type="hisbodymanagerModel.Store.member" Multiplicity="1" />
+          <End Role="contactdetails" Type="hisbodymanagerModel.Store.contactdetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="contactdetails">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="hisbodymanagerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="hisbodymanagerEntities" annotation:LazyLoadingEnabled="false">
+          <EntitySet Name="addresses" EntityType="hisbodymanagerModel.address" />
+          <EntitySet Name="addresstypes" EntityType="hisbodymanagerModel.addresstype" />
+          <EntitySet Name="churchinformations" EntityType="hisbodymanagerModel.churchinformation" />
+          <EntitySet Name="churchmemberroles" EntityType="hisbodymanagerModel.churchmemberrole" />
+          <EntitySet Name="churchroles" EntityType="hisbodymanagerModel.churchrole" />
+          <EntitySet Name="comments" EntityType="hisbodymanagerModel.comment" />
+          <EntitySet Name="commenttypes" EntityType="hisbodymanagerModel.commenttype" />
+          <EntitySet Name="contactdetails" EntityType="hisbodymanagerModel.contactdetail" />
+          <EntitySet Name="genders" EntityType="hisbodymanagerModel.gender" />
+          <EntitySet Name="grouptypes" EntityType="hisbodymanagerModel.grouptype" />
+          <EntitySet Name="meetingtypes" EntityType="hisbodymanagerModel.meetingtype" />
+          <EntitySet Name="members" EntityType="hisbodymanagerModel.member" />
+          <EntitySet Name="memberattendances" EntityType="hisbodymanagerModel.memberattendance" />
+          <EntitySet Name="membergroups" EntityType="hisbodymanagerModel.membergroup" />
+          <EntitySet Name="regions" EntityType="hisbodymanagerModel.region" />
+          <EntitySet Name="titles" EntityType="hisbodymanagerModel.title" />
+          <EntitySet Name="zones" EntityType="hisbodymanagerModel.zone" />
+          <AssociationSet Name="fkAddress_AddressType" Association="hisbodymanagerModel.fkAddress_AddressType">
+            <End Role="addresstype" EntitySet="addresstypes" />
+            <End Role="address" EntitySet="addresses" />
+          </AssociationSet>
+          <AssociationSet Name="fkAddress_Contactdetails" Association="hisbodymanagerModel.fkAddress_Contactdetails">
+            <End Role="contactdetail" EntitySet="contactdetails" />
+            <End Role="address" EntitySet="addresses" />
+          </AssociationSet>
+          <AssociationSet Name="fkAddress_memeber" Association="hisbodymanagerModel.fkAddress_memeber">
+            <End Role="member" EntitySet="members" />
+            <End Role="address" EntitySet="addresses" />
+          </AssociationSet>
+          <AssociationSet Name="fkchurchinformation_zone" Association="hisbodymanagerModel.fkchurchinformation_zone">
+            <End Role="zone" EntitySet="zones" />
+            <End Role="churchinformation" EntitySet="churchinformations" />
+          </AssociationSet>
+          <AssociationSet Name="fkChurchMemberRoles_member" Association="hisbodymanagerModel.fkChurchMemberRoles_member">
+            <End Role="member" EntitySet="members" />
+            <End Role="churchmemberrole" EntitySet="churchmemberroles" />
+          </AssociationSet>
+          <AssociationSet Name="fkChurchmemeberRoles_churchRole" Association="hisbodymanagerModel.fkChurchmemeberRoles_churchRole">
+            <End Role="churchrole" EntitySet="churchroles" />
+            <End Role="churchmemberrole" EntitySet="churchmemberroles" />
+          </AssociationSet>
+          <AssociationSet Name="fkComments_CommentType" Association="hisbodymanagerModel.fkComments_CommentType">
+            <End Role="commenttype" EntitySet="commenttypes" />
+            <End Role="comment" EntitySet="comments" />
+          </AssociationSet>
+          <AssociationSet Name="fkComments_Member" Association="hisbodymanagerModel.fkComments_Member">
+            <End Role="member" EntitySet="members" />
+            <End Role="comment" EntitySet="comments" />
+          </AssociationSet>
+          <AssociationSet Name="kfcontactdetails_member" Association="hisbodymanagerModel.kfcontactdetails_member">
+            <End Role="member" EntitySet="members" />
+            <End Role="contactdetail" EntitySet="contactdetails" />
+          </AssociationSet>
+          <AssociationSet Name="fkmember_gender" Association="hisbodymanagerModel.fkmember_gender">
+            <End Role="gender" EntitySet="genders" />
+            <End Role="member" EntitySet="members" />
+          </AssociationSet>
+          <AssociationSet Name="fkGroup_GroupType" Association="hisbodymanagerModel.fkGroup_GroupType">
+            <End Role="grouptype" EntitySet="grouptypes" />
+            <End Role="membergroup" EntitySet="membergroups" />
+          </AssociationSet>
+          <AssociationSet Name="fkMemberAttendance_Member" Association="hisbodymanagerModel.fkMemberAttendance_Member">
+            <End Role="member" EntitySet="members" />
+            <End Role="memberattendance" EntitySet="memberattendances" />
+          </AssociationSet>
+          <EntitySet Name="groups" EntityType="hisbodymanagerModel.group" />
+          <EntitySet Name="users" EntityType="hisbodymanagerModel.user" />
+          <EntitySet Name="usergroups" EntityType="hisbodymanagerModel.usergroup" />
+          <AssociationSet Name="fkgroup" Association="hisbodymanagerModel.fkgroup">
+            <End Role="group" EntitySet="groups" />
+            <End Role="usergroup" EntitySet="usergroups" />
+          </AssociationSet>
+          <AssociationSet Name="fkuser" Association="hisbodymanagerModel.fkuser">
+            <End Role="user" EntitySet="users" />
+            <End Role="usergroup" EntitySet="usergroups" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MemberId" Nullable="false" />
+          <Property Type="String" Name="Street" Nullable="false" />
+          <Property Type="String" Name="Surburb" Nullable="false" />
+          <Property Type="String" Name="City" Nullable="false" />
+          <Property Type="Int32" Name="AddressTypeId" Nullable="false" />
+          <Property Type="String" Name="PostalCode" Nullable="false" />
+          <Property Type="Int32" Name="ContactDetailId" />
+          <NavigationProperty Name="addresstype" Relationship="hisbodymanagerModel.fkAddress_AddressType" FromRole="address" ToRole="addresstype" />
+          <NavigationProperty Name="contactdetail" Relationship="hisbodymanagerModel.fkAddress_Contactdetails" FromRole="address" ToRole="contactdetail" />
+          <NavigationProperty Name="member" Relationship="hisbodymanagerModel.fkAddress_memeber" FromRole="address" ToRole="member" />
+        </EntityType>
+        <EntityType Name="addresstype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="addresses" Relationship="hisbodymanagerModel.fkAddress_AddressType" FromRole="addresstype" ToRole="address" />
+        </EntityType>
+        <EntityType Name="churchinformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Int32" Name="ZoneId" Nullable="false" />
+          <Property Type="String" Name="is" Nullable="false" />
+          <NavigationProperty Name="zone" Relationship="hisbodymanagerModel.fkchurchinformation_zone" FromRole="churchinformation" ToRole="zone" />
+        </EntityType>
+        <EntityType Name="churchmemberrole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="memberId" Nullable="false" />
+          <Property Type="Int32" Name="ChurchRoleId" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="member" Relationship="hisbodymanagerModel.fkChurchMemberRoles_member" FromRole="churchmemberrole" ToRole="member" />
+          <NavigationProperty Name="churchrole" Relationship="hisbodymanagerModel.fkChurchmemeberRoles_churchRole" FromRole="churchmemberrole" ToRole="churchrole" />
+        </EntityType>
+        <EntityType Name="churchrole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="churchmemberroles" Relationship="hisbodymanagerModel.fkChurchmemeberRoles_churchRole" FromRole="churchrole" ToRole="churchmemberrole" />
+        </EntityType>
+        <EntityType Name="comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="User" Nullable="false" />
+          <Property Type="DateTime" Name="Date" Nullable="false" />
+          <Property Type="String" Name="Comment1" Nullable="false" />
+          <Property Type="Int32" Name="MemberId" Nullable="false" />
+          <Property Type="Int32" Name="CommentTypeId" Nullable="false" />
+          <NavigationProperty Name="commenttype" Relationship="hisbodymanagerModel.fkComments_CommentType" FromRole="comment" ToRole="commenttype" />
+          <NavigationProperty Name="member" Relationship="hisbodymanagerModel.fkComments_Member" FromRole="comment" ToRole="member" />
+        </EntityType>
+        <EntityType Name="commenttype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="comments" Relationship="hisbodymanagerModel.fkComments_CommentType" FromRole="commenttype" ToRole="comment" />
+        </EntityType>
+        <EntityType Name="contactdetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="CellNumber" Nullable="false" />
+          <Property Type="String" Name="e_mail" Nullable="false" />
+          <Property Type="String" Name="Home_tel" Nullable="false" />
+          <Property Type="Int32" Name="MemberId" Nullable="false" />
+          <Property Type="String" Name="Work_Tel" Nullable="false" />
+          <NavigationProperty Name="addresses" Relationship="hisbodymanagerModel.fkAddress_Contactdetails" FromRole="contactdetail" ToRole="address" />
+          <NavigationProperty Name="member" Relationship="hisbodymanagerModel.kfcontactdetails_member" FromRole="contactdetail" ToRole="member" />
+        </EntityType>
+        <EntityType Name="gender">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="members" Relationship="hisbodymanagerModel.fkmember_gender" FromRole="gender" ToRole="member" />
+        </EntityType>
+        <EntityType Name="grouptype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" />
+          <Property Type="Boolean" Name="IsActive" />
+          <NavigationProperty Name="membergroups" Relationship="hisbodymanagerModel.fkGroup_GroupType" FromRole="grouptype" ToRole="membergroup" />
+        </EntityType>
+        <EntityType Name="meetingtype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+        </EntityType>
+        <EntityType Name="member">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" Nullable="false" />
+          <Property Type="String" Name="Surname" Nullable="false" />
+          <Property Type="Binary" Name="Image" />
+          <Property Type="Int32" Name="TitleId" Nullable="false" />
+          <Property Type="Int32" Name="GenderId" Nullable="false" />
+          <Property Type="Int32" Name="DateOfBirth" Nullable="false" />
+          <Property Type="String" Name="NationalityId" Nullable="false" />
+          <Property Type="Int32" Name="ChurchInformationId" Nullable="false" />
+          <Property Type="Int32" Name="RolesId" Nullable="false" />
+          <Property Type="DateTime" Name="DateCompletedMembership" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="DateTime" Name="DateJoinedMinistry" Nullable="false" />
+          <Property Type="Int32" Name="CellGroupId" Nullable="false" />
+          <NavigationProperty Name="addresses" Relationship="hisbodymanagerModel.fkAddress_memeber" FromRole="member" ToRole="address" />
+          <NavigationProperty Name="churchmemberroles" Relationship="hisbodymanagerModel.fkChurchMemberRoles_member" FromRole="member" ToRole="churchmemberrole" />
+          <NavigationProperty Name="comments" Relationship="hisbodymanagerModel.fkComments_Member" FromRole="member" ToRole="comment" />
+          <NavigationProperty Name="contactdetails" Relationship="hisbodymanagerModel.kfcontactdetails_member" FromRole="member" ToRole="contactdetail" />
+          <NavigationProperty Name="gender" Relationship="hisbodymanagerModel.fkmember_gender" FromRole="member" ToRole="gender" />
+          <NavigationProperty Name="memberattendances" Relationship="hisbodymanagerModel.fkMemberAttendance_Member" FromRole="member" ToRole="memberattendance" />
+        </EntityType>
+        <EntityType Name="memberattendance">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MemberId" Nullable="false" />
+          <Property Type="DateTime" Name="Date" Nullable="false" />
+          <Property Type="Int32" Name="MeetingTypeId" Nullable="false" />
+          <NavigationProperty Name="member" Relationship="hisbodymanagerModel.fkMemberAttendance_Member" FromRole="memberattendance" ToRole="member" />
+        </EntityType>
+        <EntityType Name="membergroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Int32" Name="GroupTypeId" Nullable="false" />
+          <Property Type="String" Name="Church" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="grouptype" Relationship="hisbodymanagerModel.fkGroup_GroupType" FromRole="membergroup" ToRole="grouptype" />
+        </EntityType>
+        <EntityType Name="region">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+        </EntityType>
+        <EntityType Name="title">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+        </EntityType>
+        <EntityType Name="zone">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Int32" Name="RegionId" Nullable="false" />
+          <NavigationProperty Name="churchinformations" Relationship="hisbodymanagerModel.fkchurchinformation_zone" FromRole="zone" ToRole="churchinformation" />
+        </EntityType>
+        <Association Name="fkAddress_AddressType">
+          <End Type="hisbodymanagerModel.addresstype" Role="addresstype" Multiplicity="1" />
+          <End Type="hisbodymanagerModel.address" Role="address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="addresstype">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="AddressTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkAddress_Contactdetails">
+          <End Type="hisbodymanagerModel.contactdetail" Role="contactdetail" Multiplicity="0..1" />
+          <End Type="hisbodymanagerModel.address" Role="address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contactdetail">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="ContactDetailId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkAddress_memeber">
+          <End Type="hisbodymanagerModel.member" Role="member" Multiplicity="1" />
+          <End Type="hisbodymanagerModel.address" Role="address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkchurchinformation_zone">
+          <End Type="hisbodymanagerModel.zone" Role="zone" Multiplicity="1" />
+          <End Type="hisbodymanagerModel.churchinformation" Role="churchinformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zone">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="churchinformation">
+              <PropertyRef Name="ZoneId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkChurchMemberRoles_member">
+          <End Type="hisbodymanagerModel.member" Role="member" Multiplicity="1" />
+          <End Type="hisbodymanagerModel.churchmemberrole" Role="churchmemberrole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="churchmemberrole">
+              <PropertyRef Name="memberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkChurchmemeberRoles_churchRole">
+          <End Type="hisbodymanagerModel.churchrole" Role="churchrole" Multiplicity="1" />
+          <End Type="hisbodymanagerModel.churchmemberrole" Role="churchmemberrole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="churchrole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="churchmemberrole">
+              <PropertyRef Name="ChurchRoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkComments_CommentType">
+          <End Type="hisbodymanagerModel.commenttype" Role="commenttype" Multiplicity="1" />
+          <End Type="hisbodymanagerModel.comment" Role="comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="commenttype">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="comment">
+              <PropertyRef Name="CommentTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkComments_Member">
+          <End Type="hisbodymanagerModel.member" Role="member" Multiplicity="1" />
+          <End Type="hisbodymanagerModel.comment" Role="comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="comment">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kfcontactdetails_member">
+          <End Type="hisbodymanagerModel.member" Role="member" Multiplicity="1" />
+          <End Type="hisbodymanagerModel.contactdetail" Role="contactdetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="contactdetail">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkmember_gender">
+          <End Type="hisbodymanagerModel.gender" Role="gender" Multiplicity="1" />
+          <End Type="hisbodymanagerModel.member" Role="member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="gender">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="member">
+              <PropertyRef Name="GenderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkGroup_GroupType">
+          <End Type="hisbodymanagerModel.grouptype" Role="grouptype" Multiplicity="1" />
+          <End Type="hisbodymanagerModel.membergroup" Role="membergroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="grouptype">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="membergroup">
+              <PropertyRef Name="GroupTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkMemberAttendance_Member">
+          <End Type="hisbodymanagerModel.member" Role="member" Multiplicity="1" />
+          <End Type="hisbodymanagerModel.memberattendance" Role="memberattendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="memberattendance">
+              <PropertyRef Name="MeetingTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="usergroups" Relationship="hisbodymanagerModel.fkgroup" FromRole="group" ToRole="usergroup" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="username" Nullable="false" />
+          <Property Type="Int32" Name="ChurchId" Nullable="false" />
+          <Property Type="String" Name="password" Nullable="false" />
+          <Property Type="DateTime" Name="DateCreated" Nullable="false" />
+          <Property Type="DateTime" Name="LastLogInDate" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="usergroups" Relationship="hisbodymanagerModel.fkuser" FromRole="user" ToRole="usergroup" />
+        </EntityType>
+        <EntityType Name="usergroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserId" />
+          <Property Type="Int32" Name="Groupid" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="group" Relationship="hisbodymanagerModel.fkgroup" FromRole="usergroup" ToRole="group" />
+          <NavigationProperty Name="user" Relationship="hisbodymanagerModel.fkuser" FromRole="usergroup" ToRole="user" />
+        </EntityType>
+        <Association Name="fkgroup">
+          <End Type="hisbodymanagerModel.group" Role="group" Multiplicity="0..1" />
+          <End Type="hisbodymanagerModel.usergroup" Role="usergroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="usergroup">
+              <PropertyRef Name="Groupid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkuser">
+          <End Type="hisbodymanagerModel.user" Role="user" Multiplicity="0..1" />
+          <End Type="hisbodymanagerModel.usergroup" Role="usergroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="usergroup">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="hisbodymanagerModelStoreContainer" CdmEntityContainer="hisbodymanagerEntities">
+          <EntitySetMapping Name="addresses">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.address">
+              <MappingFragment StoreEntitySet="address">
+                <ScalarProperty Name="ContactDetailId" ColumnName="ContactDetailId" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="AddressTypeId" ColumnName="AddressTypeId" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Surburb" ColumnName="Surburb" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="addresstypes">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.addresstype">
+              <MappingFragment StoreEntitySet="addresstype">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="churchinformations">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.churchinformation">
+              <MappingFragment StoreEntitySet="churchinformation">
+                <ScalarProperty Name="is" ColumnName="is" />
+                <ScalarProperty Name="ZoneId" ColumnName="ZoneId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="churchmemberroles">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.churchmemberrole">
+              <MappingFragment StoreEntitySet="churchmemberroles">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ChurchRoleId" ColumnName="ChurchRoleId" />
+                <ScalarProperty Name="memberId" ColumnName="memberId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="churchroles">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.churchrole">
+              <MappingFragment StoreEntitySet="churchroles">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="comments">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.comment">
+              <MappingFragment StoreEntitySet="comments">
+                <ScalarProperty Name="CommentTypeId" ColumnName="CommentTypeId" />
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="Comment1" ColumnName="Comment" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="commenttypes">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.commenttype">
+              <MappingFragment StoreEntitySet="commenttype">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contactdetails">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.contactdetail">
+              <MappingFragment StoreEntitySet="contactdetails">
+                <ScalarProperty Name="Work_Tel" ColumnName="Work Tel" />
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="Home_tel" ColumnName="Home tel" />
+                <ScalarProperty Name="e_mail" ColumnName="e-mail" />
+                <ScalarProperty Name="CellNumber" ColumnName="CellNumber" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="genders">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.gender">
+              <MappingFragment StoreEntitySet="gender">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="grouptypes">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.grouptype">
+              <MappingFragment StoreEntitySet="grouptype">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="meetingtypes">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.meetingtype">
+              <MappingFragment StoreEntitySet="meetingtype">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="members">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.member">
+              <MappingFragment StoreEntitySet="member">
+                <ScalarProperty Name="CellGroupId" ColumnName="CellGroupId" />
+                <ScalarProperty Name="DateJoinedMinistry" ColumnName="DateJoinedMinistry" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="DateCompletedMembership" ColumnName="DateCompletedMembership" />
+                <ScalarProperty Name="RolesId" ColumnName="RolesId" />
+                <ScalarProperty Name="ChurchInformationId" ColumnName="ChurchInformationId" />
+                <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+                <ScalarProperty Name="TitleId" ColumnName="TitleId" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="memberattendances">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.memberattendance">
+              <MappingFragment StoreEntitySet="memberattendance">
+                <ScalarProperty Name="MeetingTypeId" ColumnName="MeetingTypeId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="membergroups">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.membergroup">
+              <MappingFragment StoreEntitySet="membergroup">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Church" ColumnName="Church" />
+                <ScalarProperty Name="GroupTypeId" ColumnName="GroupTypeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="regions">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.region">
+              <MappingFragment StoreEntitySet="region">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="titles">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.title">
+              <MappingFragment StoreEntitySet="title">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zones">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.zone">
+              <MappingFragment StoreEntitySet="zone">
+                <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="groups">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.group">
+              <MappingFragment StoreEntitySet="group">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="LastLogInDate" ColumnName="LastLogInDate" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="ChurchId" ColumnName="ChurchId" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usergroups">
+            <EntityTypeMapping TypeName="hisbodymanagerModel.usergroup">
+              <MappingFragment StoreEntitySet="usergroups">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Groupid" ColumnName="Groupid" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="HisBodyManager" ZoomLevel="71">
+        <EntityTypeShape EntityType="hisbodymanagerModel.address" Width="1.5" PointX="7.5" PointY="11.5" Height="3.1340950520833317" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.addresstype" Width="1.5" PointX="5.25" PointY="12.25" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.churchinformation" Width="1.5" PointX="8" PointY="0.875" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.churchmemberrole" Width="1.5" PointX="5.25" PointY="8.25" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.churchrole" Width="1.5" PointX="3" PointY="3.375" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.comment" Width="1.5" PointX="8.25" PointY="8" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.commenttype" Width="1.5" PointX="6" PointY="5.375" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.contactdetail" Width="1.5" PointX="5.25" PointY="16.75" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.gender" Width="1.5" PointX="0.75" PointY="8.5" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.grouptype" Width="1.5" PointX="8.75" PointY="4.125" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.meetingtype" Width="1.5" PointX="2.75" PointY="0.75" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.member" Width="1.5" PointX="3" PointY="6.875" Height="4.8648079427083246" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.memberattendance" Width="1.5" PointX="5.25" PointY="20.125" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.membergroup" Width="1.5" PointX="11" PointY="3.875" Height="2.172587890624996" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.region" Width="1.5" PointX="10.75" PointY="0.75" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.title" Width="1.5" PointX="10.75" PointY="7.75" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.zone" Width="1.5" PointX="5.75" PointY="0.875" Height="1.9802864583333246" />
+        <AssociationConnector Association="hisbodymanagerModel.fkAddress_AddressType" >
+          <ConnectorPoint PointX="6.75" PointY="13.143992513020834" />
+          <ConnectorPoint PointX="7.5" PointY="13.143992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.fkAddress_Contactdetails" >
+          <ConnectorPoint PointX="6.75" PointY="18.028595377604169" />
+          <ConnectorPoint PointX="8.25" PointY="18.028595377604169" />
+          <ConnectorPoint PointX="8.25" PointY="14.634095052083332" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.fkAddress_memeber" >
+          <ConnectorPoint PointX="4.5" PointY="11.059844877604171" />
+          <ConnectorPoint PointX="7.875" PointY="11.059844877604171" />
+          <ConnectorPoint PointX="7.875" PointY="11.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.fkchurchinformation_zone" >
+          <ConnectorPoint PointX="7.25" PointY="1.8651432291666623" />
+          <ConnectorPoint PointX="8" PointY="1.8651432291666623" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.fkChurchMemberRoles_member" >
+          <ConnectorPoint PointX="4.5" PointY="9.3362939453125051" />
+          <ConnectorPoint PointX="5.25" PointY="9.3362939453125051" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.fkChurchmemeberRoles_churchRole" >
+          <ConnectorPoint PointX="4.5" PointY="4.2689925130208337" />
+          <ConnectorPoint PointX="5.59375" PointY="4.2689925130208337" />
+          <ConnectorPoint PointX="5.59375" PointY="8.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.fkComments_CommentType" >
+          <ConnectorPoint PointX="7.15625" PointY="7.1629850260416674" />
+          <ConnectorPoint PointX="7.15625" PointY="8.09375" />
+          <ConnectorPoint PointX="8.25" PointY="8.09375" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.fkComments_Member" >
+          <ConnectorPoint PointX="4.5" PointY="10.521139322916675" />
+          <ConnectorPoint PointX="8.25" PointY="10.521139322916675" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.kfcontactdetails_member" >
+          <ConnectorPoint PointX="3.75" PointY="11.739807942708325" />
+          <ConnectorPoint PointX="3.75" PointY="18.028595377604169" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="18.028595377604169" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="18.028595377604169" />
+          <ConnectorPoint PointX="5.25" PointY="18.028595377604169" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.fkmember_gender" >
+          <ConnectorPoint PointX="2.25" PointY="9.297841796874998" />
+          <ConnectorPoint PointX="3" PointY="9.297841796874998" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.fkGroup_GroupType" >
+          <ConnectorPoint PointX="10.25" PointY="5.0189925130208337" />
+          <ConnectorPoint PointX="11" PointY="5.0189925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.fkMemberAttendance_Member" >
+          <ConnectorPoint PointX="4.1562525" PointY="11.739807942708325" />
+          <ConnectorPoint PointX="4.1562525" PointY="21.115143229166662" />
+          <ConnectorPoint PointX="5.25" PointY="21.115143229166662" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="hisbodymanagerModel.group" Width="1.5" PointX="13.875" PointY="9.625" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.user" Width="1.5" PointX="13.875" PointY="12.25" Height="2.5571907552083264" />
+        <EntityTypeShape EntityType="hisbodymanagerModel.usergroup" Width="1.5" PointX="11.5" PointY="11" Height="2.1725878906250102" />
+        <AssociationConnector Association="hisbodymanagerModel.fkgroup" >
+          <ConnectorPoint PointX="13.875" PointY="11.206492513020834" />
+          <ConnectorPoint PointX="13" PointY="11.206492513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="hisbodymanagerModel.fkuser" >
+          <ConnectorPoint PointX="13.875" PointY="12.711293945312505" />
+          <ConnectorPoint PointX="13" PointY="12.711293945312505" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

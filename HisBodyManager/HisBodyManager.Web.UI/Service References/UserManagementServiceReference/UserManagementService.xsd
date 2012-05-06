@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1553/UserManagementService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" />
+  <xs:element name="SaveUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="user" nillable="true" type="q1:user" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="SaveUserResult" nillable="true" type="q2:user" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="GetAllUsersResult" nillable="true" type="q3:ArrayOfuser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="user" nillable="true" type="q4:user" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="GetUserResult" nillable="true" type="q5:user" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Savegroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="group" nillable="true" type="q6:group" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavegroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="SavegroupResult" nillable="true" type="q7:group" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroups">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="GetGroupsResult" nillable="true" type="q8:ArrayOfgroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="group" nillable="true" type="q9:group" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="GetGroupResult" nillable="true" type="q10:group" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUserGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="userGroup" nillable="true" type="q11:usergroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUserGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" minOccurs="0" name="SaveUserGroupResult" nillable="true" type="q12:usergroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

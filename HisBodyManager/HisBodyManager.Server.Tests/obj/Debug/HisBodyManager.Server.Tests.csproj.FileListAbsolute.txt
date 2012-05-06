@@ -1,0 +1,6 @@
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Tests\bin\Debug\HisBodyManager.Server.Tests.dll.config
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Tests\bin\Debug\HisBodyManager.Server.Tests.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Tests\bin\Debug\HisBodyManager.Server.Tests.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Tests\obj\Debug\ResolveAssemblyReference.cache
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Tests\obj\Debug\HisBodyManager.Server.Tests.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Tests\obj\Debug\HisBodyManager.Server.Tests.pdb

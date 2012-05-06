@@ -1,0 +1,5 @@
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Windows\bin\Debug\HisBodyManager.Server.Windows.exe
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Windows\bin\Debug\HisBodyManager.Server.Windows.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Windows\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Windows\obj\x86\Debug\HisBodyManager.Server.Windows.exe
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Windows\obj\x86\Debug\HisBodyManager.Server.Windows.pdb

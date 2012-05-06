@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hisbodymanagerModelStoreContainer" CdmEntityContainer="hisbodymanagerEntities">
+    <EntitySetMapping Name="addresses">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.address">
+        <MappingFragment StoreEntitySet="address">
+          <ScalarProperty Name="ContactDetailId" ColumnName="ContactDetailId" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="AddressTypeId" ColumnName="AddressTypeId" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Surburb" ColumnName="Surburb" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="addresstypes">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.addresstype">
+        <MappingFragment StoreEntitySet="addresstype">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="churchinformations">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.churchinformation">
+        <MappingFragment StoreEntitySet="churchinformation">
+          <ScalarProperty Name="is" ColumnName="is" />
+          <ScalarProperty Name="ZoneId" ColumnName="ZoneId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="churchmemberroles">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.churchmemberrole">
+        <MappingFragment StoreEntitySet="churchmemberroles">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ChurchRoleId" ColumnName="ChurchRoleId" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="churchroles">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.churchrole">
+        <MappingFragment StoreEntitySet="churchroles">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comments">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.comment">
+        <MappingFragment StoreEntitySet="comments">
+          <ScalarProperty Name="CommentTypeId" ColumnName="CommentTypeId" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+          <ScalarProperty Name="Comment1" ColumnName="Comment" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="commenttypes">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.commenttype">
+        <MappingFragment StoreEntitySet="commenttype">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contactdetails">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.contactdetail">
+        <MappingFragment StoreEntitySet="contactdetails">
+          <ScalarProperty Name="Work_Tel" ColumnName="Work Tel" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+          <ScalarProperty Name="Home_tel" ColumnName="Home tel" />
+          <ScalarProperty Name="e_mail" ColumnName="e-mail" />
+          <ScalarProperty Name="CellNumber" ColumnName="CellNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genders">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.gender">
+        <MappingFragment StoreEntitySet="gender">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="grouptypes">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.grouptype">
+        <MappingFragment StoreEntitySet="grouptype">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="meetingtypes">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.meetingtype">
+        <MappingFragment StoreEntitySet="meetingtype">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="members">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.member">
+        <MappingFragment StoreEntitySet="member">
+          <ScalarProperty Name="CellGroupId" ColumnName="CellGroupId" />
+          <ScalarProperty Name="DateJoinedMinistry" ColumnName="DateJoinedMinistry" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DateCompletedMembership" ColumnName="DateCompletedMembership" />
+          <ScalarProperty Name="RolesId" ColumnName="RolesId" />
+          <ScalarProperty Name="ChurchInformationId" ColumnName="ChurchInformationId" />
+          <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="memberattendances">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.memberattendance">
+        <MappingFragment StoreEntitySet="memberattendance">
+          <ScalarProperty Name="MeetingTypeId" ColumnName="MeetingTypeId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="membergroups">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.membergroup">
+        <MappingFragment StoreEntitySet="membergroup">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Church" ColumnName="Church" />
+          <ScalarProperty Name="GroupTypeId" ColumnName="GroupTypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="regions">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.region">
+        <MappingFragment StoreEntitySet="region">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="titles">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.title">
+        <MappingFragment StoreEntitySet="title">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zones">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.zone">
+        <MappingFragment StoreEntitySet="zone">
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groups">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.group">
+        <MappingFragment StoreEntitySet="group">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastLogInDate" ColumnName="LastLogInDate" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="ChurchId" ColumnName="ChurchId" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usergroups">
+      <EntityTypeMapping TypeName="hisbodymanagerModel.usergroup">
+        <MappingFragment StoreEntitySet="usergroups">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Groupid" ColumnName="Groupid" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

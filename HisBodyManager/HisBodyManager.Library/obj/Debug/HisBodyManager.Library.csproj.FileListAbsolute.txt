@@ -1,0 +1,7 @@
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Library\bin\Debug\HisBodyManager.Library.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Library\bin\Debug\HisBodyManager.Library.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Library\obj\Debug\ResolveAssemblyReference.cache
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Library\obj\Debug\HisBodyManager.Library.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Library\obj\Debug\HisBodyManager.Library.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Library\bin\Debug\HisBodyManager.DataAccess.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Library\bin\Debug\HisBodyManager.DataAccess.pdb

@@ -1,0 +1,8 @@
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2\bin\TelerikMvcApplication2.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2\bin\TelerikMvcApplication2.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2\bin\Telerik.Web.Mvc.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2\bin\Telerik.Web.Mvc.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2\bin\Telerik.Web.Mvc.xml
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2\obj\Debug\ResolveAssemblyReference.cache
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2\obj\Debug\TelerikMvcApplication2.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2\obj\Debug\TelerikMvcApplication2.pdb

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1553/UserManagementService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="user">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChurchId" type="xs:int" />
+          <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastLogInDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="usergroups" nillable="true" type="tns:ArrayOfusergroup" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="user" nillable="true" type="tns:user" />
+  <xs:complexType name="ArrayOfusergroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usergroup" nillable="true" type="tns:usergroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfusergroup" nillable="true" type="tns:ArrayOfusergroup" />
+  <xs:complexType name="usergroup">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Groupid" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="group" nillable="true" type="tns:group" />
+          <xs:element minOccurs="0" name="groupReference" nillable="true" type="q2:EntityReferenceOfgroupNbXIYouE" />
+          <xs:element minOccurs="0" name="user" nillable="true" type="tns:user" />
+          <xs:element minOccurs="0" name="userReference" nillable="true" type="q2:EntityReferenceOfuserNbXIYouE" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="usergroup" nillable="true" type="tns:usergroup" />
+  <xs:complexType name="group">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="usergroups" nillable="true" type="tns:ArrayOfusergroup" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="group" nillable="true" type="tns:group" />
+  <xs:complexType name="ArrayOfuser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="user" nillable="true" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfuser" nillable="true" type="tns:ArrayOfuser" />
+  <xs:complexType name="ArrayOfgroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="group" nillable="true" type="tns:group" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgroup" nillable="true" type="tns:ArrayOfgroup" />
+</xs:schema>

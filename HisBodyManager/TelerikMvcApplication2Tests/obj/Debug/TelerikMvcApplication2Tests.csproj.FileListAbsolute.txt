@@ -1,0 +1,5 @@
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2Tests\bin\Debug\TelerikMvcApplication2Tests.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2Tests\bin\Debug\TelerikMvcApplication2Tests.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2Tests\obj\Debug\ResolveAssemblyReference.cache
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2Tests\obj\Debug\TelerikMvcApplication2Tests.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\TelerikMvcApplication2Tests\obj\Debug\TelerikMvcApplication2Tests.pdb

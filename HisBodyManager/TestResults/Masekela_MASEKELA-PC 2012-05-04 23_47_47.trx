@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="66432f5d-37aa-4ad0-96c4-dec60a6c5c7f" name="Masekela@MASEKELA-PC 2012-05-04 23:47:47" runUser="Masekela-PC\Masekela" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="028481ce-18f8-4c93-ae56-54a3a6e6bada">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Masekela_MASEKELA-PC 2012-05-04 23_47_47" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-05-04T23:47:47.7489519-07:00" queuing="2012-05-04T23:47:58.7635819-07:00" start="2012-05-04T23:47:59.2706109-07:00" finish="2012-05-04T23:48:33.5105693-07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="c:\users\masekela\documents\visual studio 2010\projects\hisbodymanager\hisbodymanager.server.tests\bin\debug\hisbodymanager.server.tests.dll" id="ea795352-e834-3880-357a-52eab3dc0fec">
+      <Execution id="b3b66b07-30ea-4840-b1f6-91d634a40a56" />
+      <TestMethod codeBase="c:/users/masekela/documents/visual studio 2010/Projects/HisBodyManager/HisBodyManager.Server.Tests/bin/Debug/HisBodyManager.Server.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HisBodyManager.Server.Tests.UnitTest1, HisBodyManager.Server.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ea795352-e834-3880-357a-52eab3dc0fec" executionId="b3b66b07-30ea-4840-b1f6-91d634a40a56" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b3b66b07-30ea-4840-b1f6-91d634a40a56" testId="ea795352-e834-3880-357a-52eab3dc0fec" testName="TestMethod1" computerName="MASEKELA-PC" duration="00:00:30.0771996" startTime="2012-05-04T23:47:59.8496441-07:00" endTime="2012-05-04T23:48:32.0154838-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3b66b07-30ea-4840-b1f6-91d634a40a56">
+    </UnitTestResult>
+  </Results>
+</TestRun>

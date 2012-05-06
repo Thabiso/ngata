@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="3ed4935f-2e5b-49cf-9662-4ecde4c895eb" name="Masekela@MASEKELA-PC 2012-05-04 22:05:29" runUser="Masekela-PC\Masekela" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="028481ce-18f8-4c93-ae56-54a3a6e6bada">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Masekela_MASEKELA-PC 2012-05-04 22_05_29">
+      <DeploymentItem filename="c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Library\bin\Debug\HisBodyManager.Library.dll" />
+      <DeploymentItem filename="c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Infrastructure\bin\Debug\HisBodyManager.Infrastructure.dll" />
+      <DeploymentItem filename="c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.DataAccess\bin\Debug\HisBodyManager.DataAccess.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-05-04T22:05:29.0628392-07:00" queuing="2012-05-04T22:05:39.0094081-07:00" start="2012-05-04T22:05:39.5854410-07:00" finish="2012-05-04T22:06:34.2105654-07:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="MASEKELA-PC" outcome="Error" timestamp="2012-05-04T22:06:34.1265606-07:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Test_That_UserGroup_IsFullyLoading" storage="c:\users\masekela\documents\visual studio 2010\projects\hisbodymanager\hisbodymanager.tests1\bin\debug\hisbodymanager.tests1.dll" id="53f08f3f-d925-9060-7d0b-111e549ad640">
+      <Execution id="96aedd2b-3700-4ad7-b40a-25905eaec26c" />
+      <TestMethod codeBase="c:/users/masekela/documents/visual studio 2010/Projects/HisBodyManager/HisBodyManager.Tests1/bin/Debug/HisBodyManager.Tests1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HisBodyManager.Tests1.UserEntitiesTests, HisBodyManager.Tests1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Test_That_UserGroup_IsFullyLoading" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="53f08f3f-d925-9060-7d0b-111e549ad640" executionId="96aedd2b-3700-4ad7-b40a-25905eaec26c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="96aedd2b-3700-4ad7-b40a-25905eaec26c" testId="53f08f3f-d925-9060-7d0b-111e549ad640" testName="Test_That_UserGroup_IsFullyLoading" computerName="MASEKELA-PC" duration="00:00:54.1930996" startTime="2012-05-04T22:05:40.0164657-07:00" endTime="2012-05-04T22:06:34.2095653-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="96aedd2b-3700-4ad7-b40a-25905eaec26c">
+    </UnitTestResult>
+  </Results>
+</TestRun>

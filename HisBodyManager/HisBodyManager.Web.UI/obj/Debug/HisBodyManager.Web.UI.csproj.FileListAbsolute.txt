@@ -1,0 +1,16 @@
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\HisBodyManager.Web.UI.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\HisBodyManager.Web.UI.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\EntityFramework.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\Microsoft.Web.Infrastructure.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\Microsoft.Web.Optimization.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\System.Web.Helpers.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\System.Web.Mvc.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\System.Web.Providers.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\System.Web.Razor.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\System.Web.WebPages.Deployment.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\System.Web.WebPages.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\System.Web.WebPages.Razor.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\bin\EntityFramework.xml
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\obj\Debug\ResolveAssemblyReference.cache
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\obj\Debug\HisBodyManager.Web.UI.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Web.UI\obj\Debug\HisBodyManager.Web.UI.pdb

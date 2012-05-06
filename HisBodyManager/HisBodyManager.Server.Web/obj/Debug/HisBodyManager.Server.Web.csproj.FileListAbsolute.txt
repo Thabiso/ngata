@@ -1,0 +1,9 @@
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Web\bin\HisBodyManager.Server.Web.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Web\bin\HisBodyManager.Server.Web.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Web\obj\Debug\ResolveAssemblyReference.cache
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Web\obj\Debug\HisBodyManager.Server.Web.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Web\obj\Debug\HisBodyManager.Server.Web.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Web\bin\HisBodyManager.DataAccess.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Web\bin\HisBodyManager.Library.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Web\bin\HisBodyManager.DataAccess.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Server.Web\bin\HisBodyManager.Library.pdb

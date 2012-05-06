@@ -1,0 +1,10 @@
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Tests1\obj\Debug\ResolveAssemblyReference.cache
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Tests1\bin\Debug\HisBodyManager.Tests1.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Tests1\bin\Debug\HisBodyManager.Tests1.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Tests1\bin\Debug\HisBodyManager.DataAccess.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Tests1\bin\Debug\HisBodyManager.Library.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Tests1\bin\Debug\HisBodyManager.DataAccess.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Tests1\bin\Debug\HisBodyManager.Library.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Tests1\obj\Debug\HisBodyManager.Tests1.dll
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Tests1\obj\Debug\HisBodyManager.Tests1.pdb
+c:\users\masekela\documents\visual studio 2010\Projects\HisBodyManager\HisBodyManager.Tests1\bin\Debug\HisBodyManager.Tests1.dll.config

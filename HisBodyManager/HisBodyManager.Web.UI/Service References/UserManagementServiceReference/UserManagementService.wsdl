@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserManagementService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1553/UserManagementService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1553/UserManagementService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1553/UserManagementService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HisBodyManager.DataAccess" />
+      <xsd:import schemaLocation="http://localhost:1553/UserManagementService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:1553/UserManagementService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserManagementService_SaveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SaveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_Savegroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:Savegroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_Savegroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavegroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroups" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SaveUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SaveUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserManagementService">
+    <wsdl:operation name="SaveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/SaveUser" message="tns:IUserManagementService_SaveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/SaveUserResponse" message="tns:IUserManagementService_SaveUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetAllUsers" message="tns:IUserManagementService_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetAllUsersResponse" message="tns:IUserManagementService_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetUser" message="tns:IUserManagementService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetUserResponse" message="tns:IUserManagementService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Savegroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/Savegroup" message="tns:IUserManagementService_Savegroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/SavegroupResponse" message="tns:IUserManagementService_Savegroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetGroups" message="tns:IUserManagementService_GetGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetGroupsResponse" message="tns:IUserManagementService_GetGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetGroup" message="tns:IUserManagementService_GetGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetGroupResponse" message="tns:IUserManagementService_GetGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/SaveUserGroup" message="tns:IUserManagementService_SaveUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/SaveUserGroupResponse" message="tns:IUserManagementService_SaveUserGroup_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserManagementService" type="tns:IUserManagementService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SaveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Savegroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/Savegroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroups">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SaveUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserManagementService">
+    <wsdl:port name="BasicHttpBinding_IUserManagementService" binding="tns:BasicHttpBinding_IUserManagementService">
+      <soap:address location="http://localhost:1553/UserManagementService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
